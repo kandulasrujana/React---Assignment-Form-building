@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/form-render.min.css">
+
+    <!--<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Form Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+    
+    
+      body {
+        font-family: 'Arial', sans-serif;
+      }
+    
+      .form-editor {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    
+      textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+    
+
+      .add-question-btn {
+        background-color: #3490dc;
+        color: #fff;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    
+
+     
+      .form-preview {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    
+      
+      .question-preview {
+        border: 1px solid #ccc;
+        padding: 12px;
+        margin-bottom: 12px;
+      }
+    
+
+      .generate-link-btn {
+        background-color: #38a169;
+        color: #fff;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-question {
+      margin-bottom: 20px;
+    }
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-question {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+   
+
+    .categorize-description {
+      margin-bottom: 20px;
+    }
+
+    .categorize-placeholder {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    .categorize-media {
+      display: none; 
+      margin-bottom: 20px;
+    }
+
+    .categorize-options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .categorize-option {
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: move;
+    }
+
+    
+    </style>
+    
+  </head>
+  <body class="bg-gray-100 p-4">
+    <!--<noscript>You need to enable JavaScript to run this app.</noscript>-->
+    <div id="root" div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Form Editor</h2>
+      
+      <label class="block mb-2">Select the category:</label>
+      <input type="file" accept="image/*" class="mb-4" />
+
+      <label class="block mb-2">Select Question Type:</label>
+      <select class="mb-4">
+        <option value="categorize">Categorize</option>
+        <option value="cloze">Cloze</option>
+        <option value="comprehension">Comprehension</option>
+      </select>
+
+      
+<div class="categorize-container">
+  <div class="categorize-description">
+    <p>Description</p>
+  </div>
+
+  <input type="text" class="Enter a description" placeholder="Enter a description">
+  
+  <div class="categorize-description">
+    <p>Question</p>
+  </div>
+
+  <input type="text" class="Enter a description" placeholder="Enter a Question">
+
+  <label class="block mb-2">Media</label>
+  <select class="mb-4">
+    <option value="categorize">None</option>
+    <option value="cloze">Option 1</option>
+    <option value="comprehension">FeedBack 1</option>
+  </select>
+
+ 
+
+  <ul class="categorize-options" id="sortable-list">
+   
+  </ul>
+
+</div>
+
+
+      <button class="bg-blue-500 text-white py-2 px-4 rounded">Add Question</button>
+
+
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold mb-4">Form Preview</h2>
+  
+      <div class="border p-4 mb-4">
+        <div class="mb-2">
+       
+      </div>
+
+      <button class="bg-green-500 text-white py-2 px-4 rounded">Generate Fill Link</button>
+    </div>
+
+    <form id="previewForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+
+  
+      <button type="button" onclick="previewForm()">Preview Form</button>
+    </form>
+
+
+    <div id="previewLinkContainer" style="display: none;">
+      <p>Preview Link:</p>
+      <input type="text" id="previewLink" readonly>
+    </div>
+
+
+    </div>
+  
+    <button onclick="submitForm()">Submit Form</button>
+  
+    
+
+
+
+  </body>
+</html>
